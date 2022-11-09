@@ -5,10 +5,7 @@ from tkinter.messagebox import showinfo
 
 root = tk.Tk()
 root.title('snapADDY Excel configurator')
-root.geometry('400x500')
-
-label1 = tk.Label(root, text="Hallo Welt")
-label1.pack()
+root.geometry('410x500')
 
 ## Get File Paths ##
 booth_staff = ''
@@ -85,12 +82,11 @@ def calculate_result():
     root.destroy()
 
 ## Text Boxes ##
-staff_text = tk.Text(root, height=6, width=100)
+staff_text = tk.Text(root, height=8, width=100)
 staff_text_string = '''
-Bitte Excel Tabelle mit 4 Spalten einfügen
-Überschriften müssen in dieser Reihenfolge,
-mit genau diesem Text angelegt sein:\n
-Vorname | Nachname | mail |	Sales Organisation
+Please add Excel table with 4 columns in the same order as below.\n
+Column Headers must be: \n
+First Name | Last Name | mail |	Sales Organisation\n
 '''
 staff_text.insert(tk.END, staff_text_string)
 
@@ -99,28 +95,28 @@ staff_text.insert(tk.END, staff_text_string)
 # Button to open Booth Staff File
 open_staff = tk.Button(
     root, 
-    text='Excel Datei mit Standpersonal auswählen',
+    text='Select Excel file with booth staff',
     command = select_staff
 )
 
 # Button to open snapADDY Export File  File
 open_export = tk.Button(
     root, 
-    text='snapADDY Export Datei auswählen',
+    text='select snapADDY export file',
     command = select_exportfile
 )
 
 # Button to ask for an export folder
 save_button = tk.Button(
     root, 
-    text='Speicherort für neue Datei auswählen',
+    text='Select location to save the final table',
     command = save_path
 )
 
 # Button to calculate results
 calc_result = tk.Button(
     root, 
-    text='Ergebnis Kalkulieren',
+    text='Calculate Result',
     command = calculate_result
 )
 
