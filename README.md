@@ -1,2 +1,4 @@
 # merge-snapaddy-excel-columns
-Python app to concatenate columns in snapADDY excel download and references user division numbers from another table
+Python app to change the snapADDY VisitReport Excel Download:
+1. Concatenate columns from the Visitreport excel file
+2. Reference user sales organization tokens from a user table
